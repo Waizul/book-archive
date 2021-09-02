@@ -9,8 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
-    <!-- search field and button -->
-    <div class="input-group w-50 mb-3 mx-auto mt-5">
+    <header id="header">
+        <h3 class="text-center mb-3 mt-3">Book Finder</h3>
+    </header>
+    <main id="main">
+         <!-- search field and button -->
+         <div class="input-group w-50 mb-3 mx-auto">
         <input id="search-field" type="text" class="form-control" placeholder="Search a book name" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button class="btn btn-outline-secondary" onclick='searchResult()' type="button" id="search-btn">Search</button>
     </div>
@@ -27,6 +31,9 @@
 
     <!-- display result with some information -->
     <div id="display-div"></div>
+    </main>
+   
+   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="index.js"></script>

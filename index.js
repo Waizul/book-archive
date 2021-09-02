@@ -6,13 +6,14 @@ const searchResult = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     if ((searchText === '')) {
-		document.getElementById('display-result-no').innerText =
-			"You haven't write anything";
+		document.getElementById('display-result-no').innerHTML = `
+        <h5>You haven't write anything</h5>
+        `;
 	} else {
 		searchField.value = '';
         displaySpinner('block');
 
-		const url = `http://openlibrary.org/search.json?q=${searchText}`;
+		const url = `https://openlibrary.org/search.json?q=${searchText}`;
 
 		fetch(url)
 			.then((response) => response.json())
@@ -27,8 +28,9 @@ const searchResult = () => {
 //display result number found
 const displayResultNo = (number) => { 
              if (number === 0) {
-					document.getElementById('display-result-no').innerText =
-						'Nothing matched found';
+					document.getElementById('display-result-no').innerHTML = `
+						<h5>Nothing matched found</h5>;
+                    `; 
                         displaySpinner('none');
 				} else { 
                     document.getElementById('display-result-no').innerHTML = 
@@ -54,7 +56,7 @@ const displayResult = books => {
     const displayDiv = document.getElementById('display-div')
    
     books.forEach(book => {
-        console.log(book)
+        console.log(book);
             const div = document.createElement('div');
 			div.innerHTML = `
             <div class="card mx-auto mb-2 border border-3" style="max-width: 692px;">
