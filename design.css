@@ -1,3 +1,6 @@
 #display-result-no {
     color: rgb(11, 71, 11);
 }
+#spinner {
+    display: none;
+}
